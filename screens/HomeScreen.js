@@ -15,6 +15,7 @@ import {
 	ChevronDownIcon,
 } from "react-native-heroicons/outline"
 import Categories from "../components/Categories"
+import FeaturedRows from "../components/FeaturedRows"
 
 const HomeScreen = () => {
 	const navigation = useNavigation()
@@ -48,7 +49,7 @@ const HomeScreen = () => {
 			{/* Search */}
 			<View className="flex-row items-center space-x-2 pb-2 mx-4">
 				<View className="flex-row flex-1 space-x-2 bg-gray-200 p-3">
-					<MagnifyingGlassIcon color="gray" size={20} />
+					<MagnifyingGlassIcon color="gray" size={22} />
 					<TextInput
 						placeholder="Restaurants and cuisines"
 						keyboardType="default"
@@ -66,7 +67,29 @@ const HomeScreen = () => {
 				{/* Categories */}
 				<Categories />
 
-				{/* Featured Rows */}
+				{/* Featured */}
+				<FeaturedRows
+					id="123"
+					title="Featured"
+					description="Paid placement from our partners"
+					featuredCategory="featured"
+				/>
+
+				{/* Tasty Discounts */}
+				<FeaturedRows
+					id="1234"
+					title="Tasty Discounts"
+					description="Everyone loves a good deal!"
+					featuredCategory="discounts"
+				/>
+
+				{/* Offers near you */}
+				<FeaturedRows
+					id="12345"
+					title="Offers near you!"
+					description="Why not try something new?"
+					featuredCategory="offers"
+				/>
 			</ScrollView>
 		</SafeAreaView>
 	)
