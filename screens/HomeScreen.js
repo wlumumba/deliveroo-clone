@@ -17,6 +17,7 @@ import {
 import Categories from "../components/Categories"
 import FeaturedRows from "../components/FeaturedRows"
 
+
 const HomeScreen = () => {
 	const navigation = useNavigation()
 
@@ -37,10 +38,10 @@ const HomeScreen = () => {
 
 				<View className="flex-1">
 					<Text className="font-bold text-gray-400 text-xs">Deliver Now!</Text>
-					<Text className="font-bold text-xl">
-						Current Location
+					<View className="flex-row items-center space-x-2">
+						<Text className="font-bold text-xl">Current Location</Text>
 						<ChevronDownIcon size={20} color="#00CCBB"></ChevronDownIcon>
-					</Text>
+					</View>
 				</View>
 
 				<UserIcon size={35} color="#00CCBB"></UserIcon>
@@ -51,6 +52,7 @@ const HomeScreen = () => {
 				<View className="flex-row flex-1 space-x-2 bg-gray-200 p-3">
 					<MagnifyingGlassIcon color="gray" size={22} />
 					<TextInput
+						className="flex-1"
 						placeholder="Restaurants and cuisines"
 						keyboardType="default"
 					/>
